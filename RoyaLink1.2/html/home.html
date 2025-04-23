@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Section: Logo & Filters -->
+        <div class="top-section">
+            <img src="../images/logo.png" alt="Logo" class="logo">
+            <div class="filters" id="filterBar"></div> <!-- Filters will be dynamically added -->
+        </div>
+
+        <!-- Main Content: Language List & Credits -->
+        <div class="content-row">
+            <!-- Scrollable Language List -->
+            <div class="language-list" id="languageList"></div>
+
+            <!-- Credits & Translate Section -->
+            <div class="credits-section">
+                <p id="welcomeMessage"><strong>Hey! <span id="username"></span></strong></p>
+                <div class="credits">
+                    <h1 id="creditsDisplay">0</h1>
+                    <p id="requiredCreditsDisplay" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Translate Button (Above Timeline) -->
+        <div class="translate-container">
+            <button id="translateButton" class="translate-btn">Translate</button>
+        </div>
+
+        <!-- Video Controls (Play button on left, timeline on right) -->
+        <div class="video-controls">
+            <button id="playPauseButton" class="play-btn">▶️</button>
+            <input type="range" id="videoTimeline" min="0" max="100" value="0">
+        </div>
+        <span id="videoTime">00:00 / 00:00</span>
+
+        <!-- Logout Link -->
+        <p id="logoutLink" class="logout-link">Log out</p>
+
+    </div>
+
+    <script src="../js/home.js"></script>
+</body>
+</html>

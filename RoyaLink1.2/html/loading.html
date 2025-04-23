@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="../css/loading.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+        
+        <!-- Queue Status (Appears only if in queue) -->
+        <p id="queueStatus"></p>
+
+        <!-- Loading Indicator -->
+        <p id="progressStatus">Initializing...</p>
+        <div class="progress-container">
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+
+        <!-- Text Indicators for Loading Stages -->
+        <p id="leftText" class="loading-text">Processing Transcript</p>
+        <p id="topText" class="loading-text">Processing Audio</p>
+        <p id="rightText" class="loading-text">Adding Finishing Touches</p>
+    </div>
+
+    <script src="../js/loading.js"></script>
+</body>
+</html>

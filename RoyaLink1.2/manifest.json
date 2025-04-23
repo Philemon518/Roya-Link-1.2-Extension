@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Roya Link Local",
+  "version": "1.2",
+  "description": "A multi-lingual translator for YouTube videos",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://127.0.0.1/*"],
+
+  "background": {
+      "service_worker": "scripts/background.js"
+  },
+
+  "content_scripts": [
+      {
+          "matches": ["*://*/*"],
+          "js": ["scripts/content.js"]
+      }
+  ],
+
+  "action": {
+      "default_popup": "html/login.html",
+      "default_icon": {
+          "16": "images/logo.png",
+          "48": "images/logo.png",
+          "128": "images/logo.png"
+      }
+  }
+}
